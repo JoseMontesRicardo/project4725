@@ -1,0 +1,2092 @@
+{% extends 'layout.html' %}
+
+{% block form %}
+	<div class="Contenedor_Formulario">	
+		<form  class="Formulario_registro" action="add" method="post">
+		<table>
+			<tr>
+				<td><label for="var_1"><strong>1.</strong>EPS</label>
+					<select id="prueba" name="var_1" class="var_1">
+						<option value="-">-</option>
+						<option  value="EPS020">1. Caprecom EPS</option>
+						<option  value="CCF055">2. Cajacopi</option>
+						<option  value="CCF015">3. Comfacor</option>
+						<option  value="ESS024">4. Coosalud EPS</option>
+						<option  value="EPSI02">5. Manexka EPS</option>
+						<option  value="ESS002">6. Emdisalud ESS</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_2"><strong>2.</strong>Régimen</label>
+					<select name="var_2" class="var_2">
+						<option value="-">-</option>
+						<option value="1">1. contributivo</option>
+						<option value="2">2. subsidiado</option>
+						<option value="4">3. régimen de Excepción.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_3"><strong>3.</strong>Grupo poblacional</label>
+					<select name="var_3" class="var_2">
+						<option value="-">-</option>
+						<option value="1">1. pertenece a un grupo de desplazados</option>
+						<option value="2">2. está privado de la libertad</option>
+						<option value="3">3. no se encuentra en alguno de los grupos anteriores.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_4"><strong>4.</strong>Primer Nombre</label>
+					<input name="var_4" class ="var_4"type="text" placeholder="Primer Nombre" >
+				</td>
+				<td>
+					<label for="var_5"><strong>5.</strong>Segundo Nombre</label>
+					<input name="var_5" class="var_5" type="text" placeholder="Segundo Nombre" >
+				</td>
+				<td>
+
+					<label for="var_6"><strong>6.</strong>Primer Apellido</label>
+					<input name="var_6" class="var_6" type="text" placeholder="Primer Apellido" >
+				</td>
+				<td>
+					<label for="var_7"><strong>7.</strong>Segundo Apellido</label>
+					<input name="var_7" class="var_7" type="text" placeholder="Segundo Apellido" >
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="var_8"><strong>8.</strong>Tipo de Identificación</label>
+					<select name="var_8" class="var_8">
+						<option value="-">-</option>
+						<option value="MS">1. MS</option>
+						<option value="RN">2. RN</option>
+						<option value="NU">3. NU</option>
+						<option value="RC">4. RC</option>
+						<option value="TI">5. TI</option>
+						<option value="CC">6. CC</option>
+						<option value="CE">7. CE</option>
+						<option value="PA">8. PA</option>
+						<option value="AS">9. AS</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_9"><strong>9.</strong>Identificación</label>
+					<input name="var_9" class="var_9" type="text" >
+				</td>
+				<td>
+					<label for="var_10"><strong>10.</strong>Fecha Nacimiento</label>
+					<input class="var_10" type="date" name="var_10" >
+				</td>
+				<td>
+					<label for="var_11"><strong>11.</strong>Sexo</label>
+					<select name="var_11" class="var_11">
+						<option value="-">-</option>
+						<option value="M">1. Masculino</option>
+						<option value="F">2. Femenino</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_12"><strong>12.</strong>Pertenencia étnica</label>
+					<select name="var_12" class="var_12">
+						<option value="-">-</option>
+						<option value="0">1. Negro o Afrodescendiente</option>
+						<option value="1">2. Indígena</option>
+						<option value="2">3. Gitano/ROM</option>
+						<option value="4">4. Otro</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_13"><strong>13.</strong>Dirección de residencia</label>
+					<input name="var_13" class="var_13" type="text" placeholder="no puede usar (ñ,#-)" >
+				</td>
+				<td>
+					<label for="var_14"><strong>14.</strong>Teléfono</label>
+					<input name="var_14" class="var_14" type="text" placeholder="Teléfono">
+				</td>
+			</tr>
+		</table>
+		<table class="tabla_1">
+			<tr>
+				<td>
+					<label for="var_15"><strong>15.</strong>Código del municipio de residencia de la persona</label>
+				</td>
+				<td>
+					<select name="var_15" class="var_15">
+						<option value="-">-</option>
+						<option value="23001">1. MONTERÍA</option>
+						<option value="23068">2. AYAPEL</option>
+						<option value="23079">3. BUENAVISTA</option>
+						<option value="23090">4. CANALETE</option>
+						<option value="23162">5. CERETÉ</option>
+						<option value="23168">6. CHIMÁ</option>
+						<option value="23182">7. CHINÚ</option>
+						<option value="23189">8. CIÉNAGA DE ORO</option>
+						<option value="23300">9. COTORRA</option>
+						<option value="23350">10. LA APARTADA</option>
+						<option value="23417">11. LORICA</option>
+						<option value="23419">12. LOS CÓRDOBAS</option>
+						<option value="23464">13. MOMIL</option>
+						<option value="23466">14. MONTELÍBANO</option>
+						<option value="23500">15. MOÑITOS</option>
+						<option value="23555">16. PLANETA RICA</option>
+						<option value="23570">17. PUEBLO NUEVO</option>
+						<option value="23574">18. PUERTO ESCONDIDO</option>
+						<option value="23580">19. PUERTO LIBERTADOR</option>
+						<option value="23586">20. PURÍSIMA DE LA CONCEPCIÓN</option>
+						<option value="23660">21. SAHAGÚN</option>
+						<option value="23670">22. SAN ANDRÉS DE SOTAVENTO</option>
+						<option value="23672">23. SAN ANTERO</option>
+						<option value="23675">24. SAN BERNARDO DEL VIENTO</option>
+						<option value="23678">25. SAN CARLOS</option>
+						<option value="23682">26. SAN JOSÉ DE URÉ</option>
+						<option value="23686">27. SAN PELAYO</option>
+						<option value="23807">29. TIERRALTA</option>
+						<option value="23815">30. TUCHÍN</option>
+						<option value="23855">31. VALENCIA</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_16"><strong>16.</strong>Fecha de Afiliación a la EPS que reporta</label>
+				</td>
+				<td>
+					<input type="date" class="var_16"  name="var_16" min="1995-01-01">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_17"><strong>17.</strong>Persona gestante</label></td>
+				<td>
+					<select name="var_17" class="var_17">
+						<option value="-">-</option>
+						<option id="var_17_op1" value="0">1. Mujer no embarazada en la fecha de corte</option>
+						<option value="1">2. Mujer embarazada en la fecha de corte</option>
+						<option value="2">3. Mujer que estuvo embarazada en los últimos 6 meses, pero no lo está a la fecha de corte</option>
+						<option id="var_17_op4" value="3">4. No aplica. (Es hombre)</option>
+					</select>
+				</td>
+				<td><label for="var_18"><strong>18.</strong>Persona con tuberculosis</label></td>
+				<td>
+					<select name="var_18" class="var_18">
+						<option value="-">-</option>
+						<option value="0">1. No tiene tuberculosis</option>
+						<option value="1">2. Tiene tuberculosis en el momento de la fecha de corte</option>
+						<option value="2">3. Tuvo tuberculosis en los últimos 6 meses pero está curado en la fecha de corte (1º de agosto de 2013 a 31 de enero de 2014).</option>
+						<option value="3">4. Tuvo tuberculosis entre el 1º de febrero de 2013 y el 31 de julio de 2013 pero está curado en la fecha de corte.</option>
+					</select>
+				</td>
+					
+			</tr>
+			<tr>
+				<td><label for="var_19"><strong>19.</strong>Persona menor de 18 meses que es hijo de madre con VIH</label></td>
+				<td>
+					<select name="var_19" class="var_19">
+						<option value="-">-</option>
+						<option value="0">1. La persona no es menor de 18 meses de edad hijo de madre con VIH</option>
+						<option value="1">2. La persona es menor de 18 meses de edad y es hijo de madre con VIH. </option>
+					</select>
+				</td>
+				<td><label for="var_20"><strong>20.</strong>Condición con respecto al diagnóstico de infección por VIH</label></td>
+				<td>
+					<select name="var_20" class="var_20">
+						<option value="-">-</option>
+						<option value="0">1. Persona con diagnóstico confirmado de infección por el VIH (en cualquier estadio)</option>
+						<option value="1">2. Gestante ó persona con tuberculosis ó menor de 18 meses hijo de madre con infección por el VIH que no tienen infección por el VIH.</option>
+						<option value="2">3. Gestante ó persona con tuberculosis ó menor de 18 meses hijo de madre con infección por el VIH que se encuentra en proceso de estudio aun sin diagnóstico definitivo de infección por el VIH.</option>
+						<option value="3">4. Si es una gestante, persona con tuberculosis o menor de 18 meses hijo de madre con infección por el VIH que no ha sido estudiado para infección por el VIH.</option>
+						<option value="4">5. Si es una gestante, persona con tuberculosis o menor de 18 meses hijo de madre con   infección por el VIH que ha rechazado la prueba de VIH.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_21"><strong>21.</strong>Fecha de prueba presuntiva para infección por VIH (Elisa, prueba rápida)</label></td>
+				<td>
+					<input  name="var_21" type="text" list="var_21" placeholder="ejmplo:0000-00-00" class="var_21">
+					<datalist id="var_21">
+						<option value="1800-01-01">1. Es un menor de un año aún en estudio</option>
+						<option value="1811-11-01">2. Si la EPS no sabe, porque la prueba presuntiva se hizo en una EPS diferente a la que reporta o antes del año 2000</option>
+						<option value="1822-02-01">3. Si la persona presentó rechazo a la  prueba presuntiva</option>
+						<option value="1799-01-01">4. No aplica porque no se le ha realizado la prueba presuntiva. Mayor de un año aún en estudio.</option>
+					</datalist>
+				</td>
+				<td><label for="var_22"><strong>22.</strong>Fecha de diagnóstico de infección por el VIH</label></td>
+				<td>
+					<input  name="var_22" type="text" list="var_22" placeholder="ejmplo:0000-00-00" class="var_22">
+					<datalist id="var_22">
+						<option value="1800-01-01">1. Si es un persona aún en estudio</option>
+						<option value="1799-01-01">2. Si no aplica</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_23"><strong>23.</strong>Cómo llegó a la prueba presuntiva</label></td>
+				<td>
+				<select name="var_23" class="var_23" class="var_23">
+					<option value="-">-</option>
+					<option value="1">1. Por solicitud de la propia persona. </option>
+					<option value="2">2. Solicitado por el médico en estudio de un cuadro clínico sospechoso de VIH/SIDA (hospitalizado o no)</option>
+					<option value="3">3. Oferta de prueba a gestante.</option>
+					<option value="4">4. Oferta de prueba por diagnóstico de Tuberculosis (TB)</option>
+					<option value="5">5. Exposición ocupacional</option>
+					<option value="6">6. Abuso sexual</option>
+					<option value="7">7. Al donar sangre</option>
+					<option value="8">8. Persona menor de 18 meses, en seguimiento</option>
+					<option value="9">9. Otro</option>
+					<option value="10">10. No se le ha realizado la prueba presuntiva</option>
+				</select>
+				</td>
+			</tr>
+		</table>
+			<label for="var_24"><strong>24.</strong>Aseguramiento al momento del diagnóstico: Esta variable identifica si la persona tenía algún tipo de aseguramiento al SGSSS cuando se le confirmó el diagnóstico de infección por el VIH.</label>
+			<select name="var_24" class="var_24">
+				<option value="-">-</option>
+				<option value="1">1. Si estaba en  la misma EPS que reporta</option>
+				<option value="2">2. Si estaba en una EPS diferente a la que reporta</option>
+				<option value="3">3. Si la persona al momento del diagnóstico estaba como Vinculado a cargo de una entidad territorial</option>
+				<option value="4">4. Si al momento del diagnostico estaba en regímenes de excepción</option>
+				<option value="5">5. Si al momento del diagnostico no tenía ningún aseguramiento</option>
+				<option value="6">6. Si el diagnóstico fue realizado en el extranjero</option>
+				<option value="9">7. No aplica.</option>
+			</select>
+		<table class="tabla_2">
+			<tr>
+				<td><label for="var_25"><strong>25.</strong>EPS o entidad territorial anterior:</label></td>
+				<td>
+					<select name="var_25" class="var_25">
+						<option value="-">-------OPCIONES-------</option>
+						<option value="0">Si no tenía ningún aseguramiento o fue realizado en el extranjero</option>
+						<option value="8">Si no se conoce la información porque la persona fue diagnosticada antes de 31 de diciembre de 2010.</option>
+						<option value="9">No aplica.</option>
+						<option value="-">-----------------------------EPS-------------------------</option>
+						<option value="CCF001">CAMACOLCOMFAMILIAR CAMACOL</option>
+						<option value="CCF002">COMFAMA</option>
+						<option value="CCF007">COMFAMILIAR CARTAGENA</option>
+						<option value="CCF009"> COMFABOY</option>
+						<option value="CCF015">COMFACOR</option>
+						<option value="CCF018">CAFAM</option>
+						<option value="CCF023">Caja de Compensación Familiar de la Guajira</option>
+						<option value="CCF024">COMFAMILIAR</option>
+						<option value="CCF027">COMFAMILIAR NARIÑO</option>
+						<option value="CCF028">COMFENALCO QUINDIO</option>
+						<option value="CCF031">CAJASAN</option>
+						<option value="CCF032">Fenalco Seccional de Santander</option>
+						<option value="CCF033">Caja de Compensación Familiar de Sucre</option>
+						<option value="CCF035">CAFABA</option>
+						<option value="CCF037">TOLIMA COMFENALCO</option>
+						<option value="CCF045 ">COMFANORTE</option>
+						<option value="CCF049">COMFAORIENTE</option>
+						<option value="CCF053">COMFACUNDI</option>
+						<option value="CCF055">CAJACOPI</option>
+						<option value="CCF101">COLSUBSIDIO</option>
+						<option value="CCF102">COMFACHOCO</option>
+						<option value="CCF103">COMFACA</option>
+						<option value="EPS020">Caprecom EPS</option>
+						<option value="EPS022">EPS CONVIDA</option>
+						<option value="EPS025">CAPRESOCA EPS</option>
+						<option value="EPS028 ">CALISALUD E.P.S</option>
+						<option value="EPS030">E.P.S. CONDOR S.A</option>
+						<option value="EPS031">SELVASALUD S.A. E.P.S</option>
+						<option value="EPSI01">Asociación Indígena del Cesar y la Guajira DUSAKAWI</option>
+						<option value="EPSI02">MANEXKA EPS</option>
+						<option value="EPSI03">Asociación Indígena del Cauca</option>
+						<option value="EPSI04 ">ANASWAYUU</option>
+						<option value="EPSI05">MALLAMAS</option>
+						<option value="EPSI06">PIJAOS SALUD EPSI</option>
+						<option value="EPSS02">Salud Total S.A. E.P.S</option>
+						<option value="EPSS03">Cafesalud E.P.S. S.A.</option>
+						<option value="EPSS09">EPS Programa Comfenalco Antioquia</option>
+						<option value="EPSS14">Humana Vivir S.A. E.P.S.</option>
+						<option value="EPSS26">SOLSALUD E.P.S. S.A</option>
+						<option value="EPSS33">SALUDVIDA S.A .E.P.S</option>
+						<option value="ESS002"> EMDISALUD ESS</option>
+						<option value="ESS024">COOSALUD E.S.S.</option>
+						<option value="ESS062">ASMET SALUD</option>
+						<option value="ESS076">Asociación Mutual Barrios Unidos de Quibdó E.S.S.</option>
+						<option value="ESS091">ECOOPSOS</option>
+						<option value="ESS118">EMSSANAR E.S.S.</option>
+						<option value="ESS133">COMPARTA</option>
+						<option value="ESS207">Asociación Mutual SER Empresa Solidaria de Salud ESS</option>
+						<option value="-">--------------------------MUNICIPIOS--------------------</option>
+						<option value="23001">MONTERÍA</option>
+						<option value="23068">AYAPEL</option>
+						<option value="23079">BUENAVISTA</option>
+						<option value="23090">CANALETE</option>
+						<option value="23162">CERETÉ</option>
+						<option value="23168">CHIMÁ</option>
+						<option value="23182">CHINÚ</option>
+						<option value="23189">CIÉNAGA DE ORO</option>
+						<option value="23300">COTORRA</option>
+						<option value="23350">LA APARTADA</option>
+						<option value="23417">LORICA</option>
+						<option value="23419">LOS CÓRDOBAS</option>
+						<option value="23464">MOMIL</option>
+						<option value="23466">MONTELÍBANO</option>
+						<option value="23500">MOÑITOS</option>
+						<option value="23555">PLANETA RICA</option>
+						<option value="23570">PUEBLO NUEVO</option>
+						<option value="23574">PUERTO ESCONDIDO</option>
+						<option value="23580">PUERTO LIBERTADOR</option>
+						<option value="23586">PURÍSIMA DE LA CONCEPCIÓN</option>
+						<option value="23660">SAHAGÚN</option>
+						<option value="23670">SAN ANDRÉS DE SOTAVENTO</option>
+						<option value="23672">SAN ANTERO</option>
+						<option value="23675">SAN BERNARDO DEL VIENTO</option>
+						<option value="23678">SAN CARLOS</option>
+						<option value="23682">SAN JOSÉ DE URÉ</option>
+						<option value="23686">SAN PELAYO</option>
+						<option value="23807">TIERRALTA</option>
+						<option value="23815">TUCHÍN</option>
+						<option value="23855">VALENCIA</option>
+					</select>
+				</td>
+				<td><label for="var_26"><strong>26.</strong>Mecanismo de transmisión:</label></td>
+				<td>
+				<select name="var_26" class="var_26" class="var_26">
+					<option value="-">-</option>
+					<option value="0">1. no se conoce</option>
+					<option value="1">2. Transmisión sexual. </option>
+					<option value="2">3. Transfusión.</option>
+					<option value="3">4. Uso de agujas.</option>
+					<option value="4">5. Transmisión materno infantil.</option>
+					<option value="5">6. Accidente ocupacional </option>
+					<option value="6">7. Violación o abuso sexual.</option>
+					<option value="9">8. No aplica (persona sin diagnostico de VIH)</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_27"><strong>27.</strong>Estadio clínico al momento del diagnóstico (adolescentes de 13 años en adelante y adultos):</label></td>
+				<td>
+					<select name="var_27" class="var_27" class="var_27">
+						<option value="-">-</option>
+						<option value="1">1. Estadio A1</option>
+						<option value="2">2. Estadio A2</option>
+						<option value="3">3. Estadio A3</option>
+						<option value="4">4. Estadio B1</option>
+						<option value="5">5. Estadio B2</option>
+						<option value="6">6. Estadio B3 </option>
+						<option value="7">7. Estadio C1</option>
+						<option value="8">8. Estadio C2</option>
+						<option value="9">9. Estadio C3 </option>
+						<option value="10">10. No aplica porque no tiene VIH</option>
+						<option value="11">11. No aplica porque es niño o niña</option>
+						<option value="12">12. Por establecer</option>
+					</select>
+				</td>
+				<td><label for="var_27_1"><strong>27.1.</strong>Estadio clínico al momento del diagnóstico (niños y niñas menores de 13 años)</label></td>
+				<td>
+					<select name="var_27_1" class="var_27_1" class="var_27_1">
+						<option value="-">-</option>
+						<option value="1">1. Estadio N1</option>
+						<option value="2">2. Estadio N2</option>
+						<option value="3">3. Estadio N3</option>
+						<option value="4">4. Estadio A1</option>
+						<option value="5">5. Estadio A2</option>
+						<option value="6">6. Estadio A3 </option>
+						<option value="7">7. Estadio B1</option>
+						<option value="8">8. Estadio B2</option>
+						<option value="9">9. Estadio B3 </option>
+						<option value="10">10. Estadio C1</option>
+						<option value="11">11. Estadio C2</option>
+						<option value="12">12. Estadio C3</option>
+						<option value="13">13. No aplica porque no tiene VIH</option>
+						<option value="14">14. No aplica por ser adolescente o adulto</option>
+						<option value="15">15. Por establecer</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_28"><strong>28.</strong>Conteo de linfocitos T CD4+ al momento del diagnóstico.</label></td>
+				<td>
+					<input  name="var_28" type="text" list="var_28"  class="var_28">
+					<datalist id="var_28">
+						<option value="99001">1. No se tiene porque se hizo el diagnóstico en otra EPS diferente a la que reporta.</option>
+						<option value="99002">2.  No se tiene porque aunque el diagnóstico se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="99003">3. No se hizo recuento de CD4 al momento del diagnóstico.</option>
+						<option value="99004">4. No disponible por causas externas a la EPS que reporta. </option>
+						<option value="99005">5. No aplica (persona no tiene VIH).</option>
+					</datalist>
+				</td>
+				<td><label for="var_29"><strong>29.</strong>Conteo de linfocitos totales al momento del diagnóstico</label></td>
+				<td>
+					<input  name="var_29" type="text" list="var_29"  class="var_29">
+					<datalist id="var_29">
+						<option value="99001">1. No se tiene porque se hizo el diagnóstico en otra EPS diferente a la que reporta. </option>
+						<option value="99002">2.  No se tiene porque aunque el diagnóstico se hizo en la EPS que reporta se hizo antes del año 1990.</option>
+						<option value="99003">3. No se hizo conteo de linfocitos totales al momento del diagnóstico.</option>
+						<option value="99004">4. No disponible por causas externas a la EPS que reporta.</option>
+						<option value="99005">5. No aplica (persona no tiene VIH).</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_30"><strong>30.</strong>Fecha inicio  de la primera TAR</label></td>
+				<td>
+					<input  name="var_30" type="text" list="var_30" placeholder="ejemplo:0000-00-00"  class="var_30">
+					<datalist id="var_30">
+						<option value="1800-01-01">1. No aplica porque no tiene VIH (gestantes o personas con tuberculosis estudiadas y descartados), persona aún en estudio, o no recibe TAR</option>
+						<option value="1799-01-01">2. Persona que recibió TAR por alguna indicación como embarazo, pero en el momento del reporte (31 de enero de 2014) no está recibiendo TAR.</option>
+						<option value="1788-01-01">3. Fecha desconocida porque inició la primera TAR  en otra EPS. Verifique que la fecha de inicio de la TAR sea posterior a la fecha de nacimiento.</option>
+					</datalist>
+				</td>
+				<td><label for="var_31"><strong>31.</strong>Conteo de linfocitos T CD 4+ al momento de inicio de la TAR:</label></td>
+				<td>
+					<input  name="var_31" type="text" list="var_31"  class="var_31">
+					<datalist id="var_31">
+						<option value="99001">1. No se tiene porque se inició TAR en otra EPS diferente a la que reporta.</option>
+						<option value="99002">2. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="99003">3. No se hizo conteo de linfocitos T CD4+ al momento del inicio de TAR. </option>
+						<option value="99004">4. No disponible por causas externas a la EPS que reporta.</option>
+						<option value="99005">5. No aplica.</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_32"><strong>32.</strong>Conteo de linfocitos totales al momento del diagnóstico</label></td>
+				<td>
+					<input  name="var_32" type="text" list="var_32"  class="var_32">
+					<datalist id="var_32">
+						<option value="99001">1. No se tiene porque se inició TAR en otra EPS diferente a la que reporta.</option>
+						<option value="99002">2. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 1990. </option>
+						<option value="99003">3. No se hizo conteo de linfocitos totales al momento del inicio de TAR.</option>
+						<option value="99004">4. No disponible por causas externas a la EPS que reporta.</option>
+						<option value="99005">5. No aplica </option>
+					</datalist>
+				</td>
+				<td><label for="var_33"><strong>33.</strong>Carga viral para VIH al inicio de TAR</label></td>
+				<td>
+					<select name="var_33" class="var_33" class="var_33">
+						<option value="-">-</option>
+						<option value="0">1. fue Indetectable.</option>
+						<option value="1">2. Detectable pero menos de mil copias.</option>
+						<option value="2">3. Mil o más copias.</option>
+						<option value="3"> 4. No se tiene porque se inició TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="5">6. No disponible por causas externas a la EPS que reporta.</option>
+						<option value="6">7. No realizada al momento del inicio de la TAR.</option>
+						<option value="9">8. No aplica.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_34"><strong>34.</strong>Motivo de inicio de la TAR: </label></td>
+				<td>
+					<select name="var_34" class="var_34" class="var_34">
+						<option value="-">-</option>
+						<option value="1">1. Por cuadro clínico (patología que define SIDA u otra patología).</option>
+						<option value="2">2. Por estado de embarazo.</option>
+						<option value="3">3. Por valor del conteo de linfocitos T CD4+</option>
+						<option value="4">4. Por porcentaje de linfocitos T CD4+ </option>
+						<option value="5">5. Por carga viral. </option>
+						<option value="6">6. Por otra causa.</option>
+						<option value="7">7. No se tiene porque se hizo el diagnóstico en otra EPS diferente a la que reporta.</option>
+						<option value="8">8. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">9. No ha iniciado TAR.</option>
+						<option value="10">10. No aplica (Persona no tiene VIH) </option>
+					</select>
+				</td>
+				<td><label for="var_35"><strong>35.</strong>Tenía anemia al momento de iniciar TAR</label></td>
+				<td>
+					<select name="var_35" class="var_35" class="var_35">
+						<option value="-">-</option>
+						<option value="0">1. No.</option>
+						<option value="1">2. Si.</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH).</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_36"><strong>36.</strong>Tenía Enfermedad Renal Crónica al iniciar TAR</label></td>
+				<td>
+					<select name="var_36" class="var_36" class="var_36">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+				<td><label for="var_37"><strong>37.</strong>Tenía coinfección con  Hepatitis B al  inicial TAR</label></td>
+				<td>
+					<select name="var_37" class="var_37" class="var_37">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_38"><strong>38.</strong>Tenía coinfección con  Hepatitis C al  inicial TAR</label></td>
+				<td>
+					<select name="var_38" class="var_38" class="var_38">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene información porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+				<td><label for="var_39"><strong>39.</strong>Tenía tuberculosis al iniciar TAR</label></td>
+				<td>
+					<select name="var_39" class="var_39" class="var_39">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene información porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_40"><strong>40.</strong>Tenía cirugía cardiovascular o infarto previo al inicio de la TAR</label></td>
+				<td>
+					<select name="var_40" class="var_40" class="var_40">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene información porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+				<td><label for="var_41"><strong>41.</strong>Tenía sarcoma de Kaposi al iniciar TAR</label></td>
+				<td>
+					<select name="var_41" class="var_41" class="var_41">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene información porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_42"><strong>42.</strong> Estaba embarazada al iniciar TAR</label></td>
+				<td>
+					<select name="var_42" class="var_42" class="var_42">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene información porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+				<td><label for="var_43"><strong>43.</strong>Tenía enfermedad psiquiátrica al iniciar TAR</label></td>
+				<td>
+					<select name="var_43" class="var_43" class="var_43">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. No ha iniciado TAR.</option>
+						<option value="3">4. No se tiene información porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="9">6. No aplica (Persona no tiene VIH)</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+			<h3 class="titles">44. Medicamentos de TAR al inicio: registre los medicamentos que recibió al inicio de la TAR (principios activos)</h3>
+			<table class="tabla_3">
+			<tr>
+				<td>
+					<label for="var_44_1"><strong>44.1.</strong>Abacavir</label>
+					<select name="var_44_1" class="var_44_1" class="var_44_1">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_2"><strong>44.2.</strong>Atazanavir</label>
+					<select name="var_44_2" class="var_44_2" class="var_44_2">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_3"><strong>44.3.</strong>Didanosina</label>
+					<select name="var_44_3" class="var_44_3" class="var_44_3">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_4"><strong>44.4.</strong>Efavirenz</label>
+					<select name="var_44_4" class="var_44_4" class="var_44_4">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_5"><strong>44.5.</strong>Estavudina</label>
+					<select name="var_44_5" class="var_44_5" class="var_44_5">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_6"><strong>44.6.</strong> Fosamprenavir</label>
+					<select name="var_44_6" class="var_44_6" class="var_44_6">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_7"><strong>44.7.</strong>Indinavir</label>
+					<select name="var_44_7" class="var_44_7" class="var_44_7">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_8"><strong>44.8.</strong> Lamivudina</label>
+					<select name="var_44_8" class="var_44_8" class="var_44_8">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="var_44_9"><strong>44.9.</strong> Lopinavir</label>
+					<select name="var_44_9" class="var_44_9" class="var_44_9">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_10"><strong>44.10.</strong> Nevirapina:</label>
+					<select name="var_44_10" class="var_44_10" class="var_44_10">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_11"><strong>44.11.</strong> Nelfinavir</label>
+					<select name="var_44_11" class="var_44_11" class="var_44_11">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_12"><strong>44.12.</strong>Ritonavir</label>
+					<select name="var_44_12" class="var_44_12" class="var_44_12">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_13"><strong>44.13.</strong>Saquinavir</label>
+					<select name="var_44_13" class="var_44_13" class="var_44_13">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>				
+				</td>
+				<td>
+					<label for="var_44_14"><strong>44.14.</strong>Zidovudina</label>
+					<select name="var_44_14" class="var_44_14" class="var_44_14">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_15"><strong>44.15.</strong> Tenofovir</label>
+					<select name="var_44_15" class="var_44_15" class="var_44_15">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_16"><strong>44.16.</strong> Emtricitabina</label>
+					<select name="var_44_16" class="var_44_16" class="var_44_16">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+			<h5 class="titles">A partir de la variable  44.17 hasta la  44.20 se debe registrar el o los  principios activos  antirretrovirales No POS (Darunavir, Enfuvirtida, Etravirina, Maraviroc, Raltegravir) que recibió la persona al inicio de la TAR con el código CUM respectivo (Si la persona no tiene VIH  o no ha iniciado TAR registre también la opción 0 –cero-).</h5>
+		<table class="table4">
+			<tr>
+				<td>
+					<label for="var_44_17"><strong>44.17.</strong>medicamento 1()</label>
+					<select name="var_44_17" class="var_44_17" class="var_44_17">
+						<option value="-">-</option>
+						<option value="19975691-01-0J05AE10">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_18"><strong>44.18.</strong>medicamento 2()</label>
+					<select name="var_44_18" class="var_44_18" class="var_44_18">
+						<option value="-">-</option>
+						<option value="19946337-01-0V08AA05">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_19"><strong>44.19.</strong>medicamento 3()</label>
+					<select name="var_44_19" class="var_44_19" class="var_44_19">
+						<option value="-">-</option>
+						<option value="19991326-01-0J05AG04">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_44_20"><strong>44.20.</strong>medicamento 4()</label>
+					<select name="var_44_20" class="var_44_20" class="var_44_20">
+						<option value="-">-</option>
+						<option value="19989116-01-0J05AX09">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_45"><strong>45.</strong>Recibió asesoría antes de iniciar TAR</label>
+					<select name="var_45" class="var_45" class="var_45">
+						<option value="-">-</option>
+						<option value="0">1. No recibió asesoría al inicio de la TAR.</option>
+						<option value="1">2. Si recibió, por TEC. (TEC=Trabajador Encargado de asesorar el Cumplimiento)</option>
+						<option value="2">3. Si recibió, por otra persona, diferente al TEC</option>
+						<option value="3">4. No se tiene porque se inició en otra EPS diferente a la que reporta.</option>
+						<option value="4">5. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2006</option>
+						<option value="9">6. No aplica (no ha iniciado TAR o no tiene VIH)</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<table class="tabla_4">
+			<tr>
+				<td><label for="var_46"><strong>46.</strong>Número de meses que se dispensó la fórmula completa de TAR durante los primeros 12 meses luego de iniciar TAR</label></td>
+				<td>
+					<input  name="var_46" placeholder="0-12" type="text" list="var_46"  class="var_46">
+					<datalist id="var_46">
+						<option value="98">1. No se tiene porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="99">2. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="0">3. No tiene VIH o no ha iniciado TAR.</option>
+					</datalist>
+				</td>
+				<td><label for="var_47"><strong>47.</strong>Número de citas médicas a las que asistió durante los primeros 12 meses luego de iniciar TAR</label></td>
+				<td>
+					<input  name="var_47" placeholder="0-50" type="text" list="var_47"  class="var_47">
+					<datalist id="var_47">
+						<option value="97">1. No aplica porque no recibe TAR o no tiene VIH. </option>
+						<option value="98">2. No se tiene porque se hizo el inicio de TAR en otra EPS diferente a la que reporta.</option>
+						<option value="99">3. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000. </option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<label for="var_48"><strong>48.</strong>Alguno de los medicamentos con los que inició la TAR ha sido cambiado, por cualquier motivo</label>
+					<select name="var_48" class="var_48" class="var_48">
+						<option value="-">-</option>
+						<option value="0">1. No, todavía recibe los mismos medicamentos con los que inició TAR</option>
+						<option value="1">2. Si, ha cambiado alguno de los medicamentos con los que inició TAR. </option>
+						<option value="2">3. La persona suspendió voluntariamente la TAR. (La entidad debe tener consentimiento firmado por la persona)</option>
+						<option value="3">4. Mujer que recibió TAR durante embarazo pero no recibe al momento del corte.</option>
+						<option value="4">5. Recibió TAR post exposición pero no recibe al momento del corte.</option>
+						<option value="9">6. No aplica (no tiene VIH o no ha iniciado TAR).</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_49"><strong>49.</strong>Fecha del primer cambio de cualquier medicamento del esquema inicial TAR</label>
+					<input  name="var_49" type="text" placeholder="ejemplo: 0000-00-00" list="var_49"  class="var_49">
+					<datalist id="var_49">
+						<option value="1800-01-01">1. Todavía continúa con el esquema inicial, sin ningún cambio en los medicamentos</option>
+						<option value="1777-01-01">2. No sabe porque el esquema no fue cambiado en la EPS que reporta</option>
+						<option value="1788-01-01">3. No se tiene porque aunque el inicio de TAR se hizo en la EPS que reporta se hizo antes del año 2000.</option>
+						<option value="1799-01-01">3. No aplica (no tiene VIH o no ha iniciado TAR).</option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+		<label for="var_50"><strong>50.</strong>Causa de cambio de medicamento con el que inició TAR: Registre la causa principal por la cual se causó el cambio de medicamento con el que inició TAR.</label>
+					<select name="var_50" class="var_50" class="var_50">
+						<option value="-">-</option>
+						<option value="1">1. Intolerancia, efectos secundarios o interacciones medicamentosas</option>
+						<option value="2">2. Falla (terapéutica, virológica, clínica, inmunológica).</option>
+						<option value="3">3. Para facilitar la adherencia al esquema</option>
+						<option value="4">4. No sabe porque el esquema no fue cambiado en la EPS que reporta o no hay información disponible</option>
+						<option value="5">5. No recibe TAR</option>
+						<option value="6">6. Por razones administrativas</option>
+						<option value="9">7. No aplica. (No tiene VIH, no ha cambiado la TAR inicial, terminó esquema de profilaxis con TAR, suspensión voluntario de TAR)</option>
+					</select>
+		<table class="tabla_5">
+			<tr>
+				<td><label for="var_51"><strong>51.</strong>Número de fallas desde el inicio de la TAR hasta el reporte actual</label></td>
+				<td>
+					<input  name="var_51" type="text" placeholder="0-20" list="var_51"  class="var_51">
+					<datalist id="var_51">
+						<option value="99">1. No aplica. (Porque no ha iniciado  TAR o no tiene VIH)</option>
+					</datalist>
+				</td>
+				<td><label for="var_52"><strong>52.</strong>Número de cambios de medicamentos de la TAR por todas las causas hasta el reporte actual:</label></td>
+				<td>
+					<input  name="var_52" type="text" placeholder="0-40" list="var_52"  class="var_52">
+					<datalist id="var_52">
+						<option value="99">1. No aplica (no tiene VIH o no ha iniciado TAR).</option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+			<h5 class="titles">A partir de la variable 53.1 hasta la 53.20 encontrará las patologías que definen SIDA. Registre si la persona durante o después de establecido el diagnóstico de VIH/SIDA ha presentado o presenta alguna de estas patologías según corresponda. La respuesta a cada una de las siguientes variables deben estar soportadas y debidamente documentadas en la historia clínica de acuerdo a la GPC de VIH/SIDA adoptada por el MSPS, con la resolución 3442 de 2006. Registre la opción que corresponda en estas  variables SOLAMENTE para  las personas con variable 20 igual cero (0).  Para las personas sin VIH registre cero (0).</h5>
+			<h3 class="titles" >53. Patologías que definen SIDA</h3>
+		<table class="tabla_6">
+			<tr>
+				<td><label for="var_53_1"><strong>53.1.</strong>Candidiasis</label></td>
+				<td>
+					<select name="var_53_1" class="var_53_1" class="var_53_1">
+					<option value="-">-</option>
+					<option value="0">1. Si la persona no ha tenido o no tiene  esta enfermedad</option>
+					<option value="1">2. Falla (terapéutica, virológica, clínica, inmunológica).</option>
+				</select>
+				</td>
+				<td><label for="var_53_2"><strong>53.2.</strong>Tuberculosis</label></td>
+				<td>
+					<select name="var_53_2" class="var_53_2" class="var_53_2">
+						<option value="-">-</option>
+						<option value="0">1. Si la persona no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad en cualquier localización.</option>
+					</select>
+				</td>
+				<td><label for="var_53_3"><strong>53.3.</strong>Cáncer de cérvix, invasivo</label></td>
+				<td>
+					<select name="var_53_3" class="var_53_3" class="var_53_3">
+						<option value="-">-</option>
+						<option value="0">1. Si la persona no ha tenido o no tiene  esta enfermedad.</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad (sólo si es o fue invasivo)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_53_4"><strong>53.4.</strong>Demencia asociada al VIH</label></td>
+				<td>
+					<select name="var_53_4" class="var_53_4" class="var_53_4">
+						<option value="-">-</option>
+						<option value="0">1. Si la persona no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad.</option>
+					</select>
+				</td>
+				<td><label for="var_53_5"><strong>53.5.</strong>Coccidioidomicosis extrapulmonar</label></td>
+				<td>
+					<select name="var_53_5" class="var_53_5" class="var_53_5">
+						<option value="-">-</option>
+						<option value="0">1. Si la persona no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad.</option>
+					</select>
+				</td>
+				<td><label for="var_53_6"><strong>53.6.</strong>Infección por el Citomegalovirus (CMV)</label></td>
+				<td>
+					<select name="var_53_6" class="var_53_6" class="var_53_6">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad en cualquier órgano excepto hígado, bazo o ganglios linfáticos.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_53_7"><strong>53.7.</strong>Herpes simple</label></td>
+				<td>
+					<select name="var_53_7" class="var_53_7" class="var_53_7">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad (con úlceras mucocutáneas de más de un mes de duración o causando bronquitis, neumonitis o esofagitis).</option>
+					</select>
+				</td>
+				<td><label for="var_53_8"><strong>53.8.</strong>Diarrea de más de un mes de evolución</label></td>
+				<td>
+					<select name="var_53_8" class="var_53_8" class="var_53_8">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad y es o fue causada por Isospora belli o Cryptosporidium</option>
+					</select>
+				</td>
+				<td><label for="var_53_9"><strong>53.9.</strong>Histoplasmosis</label></td>
+				<td>
+					<select name="var_53_9" class="var_53_9" class="var_53_9">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad y es o fue de tipo extrapulmonar.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_53_10"><strong>53.10.</strong>Linfoma de Burkitt</label></td>
+				<td>
+					<select name="var_53_10" class="var_53_10" class="var_53_10">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad de tipo  Inmunoblástico o primario del SNC</option>
+					</select>
+				</td>
+				<td><label for="var_53_11"><strong>53.11.</strong>Neumonía por Pneumocystis jiroveci (carinii)</label></td>
+				<td>
+					<select name="var_53_11" class="var_53_11" class="var_53_11">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad</option>
+					</select>
+				</td>
+				<td><label for="var_53_12"><strong>53.12.</strong>Neumonía bacteriana recurrente</label></td>
+				<td>
+					<select name="var_53_12" class="var_53_12" class="var_53_12">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad  (dos o más episodios en un periodo de un año)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_53_13"><strong>53.13.</strong>Septicemia por salmonella</label></td>
+				<td>
+					<select name="var_53_13" class="var_53_13" class="var_53_13">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad (no tifoidica).</option>
+					</select>
+				</td>
+				<td><label for="var_53_14"><strong>53.14.</strong>Infección diseminada por Micobacterium (MAC o MAI)</label></td>
+				<td>
+					<select name="var_53_14" class="var_53_14" class="var_53_14">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad.</option>
+					</select>
+				</td>
+				<td><label for="var_53_15"><strong>53.15.</strong>Criptococosis</label></td>
+				<td>
+					<select name="var_53_15" class="var_53_15" class="var_53_15">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad de tipo Extrapulmonar</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_53_16"><strong>53.16.</strong>Sarcoma de Kaposi</label></td>
+				<td>
+					<select name="var_53_16" class="var_53_16" class="var_53_16">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad.</option>
+					</select>
+				</td>
+				<td><label for="var_53_17"><strong>53.17.</strong>Síndrome de desgaste o caquexia asociada a VIH</label></td>
+				<td>
+					<select name="var_53_17" class="var_53_17" class="var_53_17">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad</option>
+					</select>
+				</td>
+				<td><label for="var_53_18"><strong>53.18.</strong>Leucoencefalopatía multifocal progresiva o encefalopatía por VIH</label></td>
+				<td>
+					<select name="var_53_18" class="var_53_18" class="var_53_18">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_53_19"><strong>53.19.</strong>Neumonía intersticial linfoidea</label></td>
+				<td>
+					<select name="var_53_19" class="var_53_19" class="var_53_19">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad</option>
+					</select>
+				</td>
+				<td><label for="var_53_20"><strong>53.20.</strong>Toxoplasmosis cerebral</label></td>
+				<td>
+					<select name="var_53_20" class="var_53_20" class="var_53_20">
+						<option value="-">-</option>
+						<option value="0">1. Si la  no ha tenido o no tiene  esta enfermedad</option>
+						<option value="1">2. Si la persona ha tenido o tiene la enfermedad</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+			<h5 class="titles">A partir de la variable 54, hasta la variable 102  se registran datos del estado actual de la persona es decir del PRESENTE, a la fecha de corte 31 de enero de 2014.</h5>
+		<table class="tabla_5">
+			<tr>
+				<td><label for="var_54"><strong>54.</strong>Código de habilitación de la sede o sucursal de la IPS</label></td>
+				<td>
+					<input name="var_54" class="var_54" type="text">
+				</td>
+				<td><label for="var_55"><strong>55.</strong>Fecha de ingreso a la IPS actual, para seguimiento y atención</label></td>
+				<td>
+					<input  name="var_55" placeholder="ejemplo 0000-00-00" type="text" list="var_55"  class="var_55">
+					<datalist id="var_55">
+						<option value="1799-01-01">1. No aplica (No tiene VIH).</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_56"><strong>56.</strong>Municipio de la IPS (código DANE)</label></td>
+				<td>
+					<select name="var_56" class="var_56">
+						<option value="-">-</option>
+						<option value="23001">1. MONTERÍA</option>
+						<option value="23068">2. AYAPEL</option>
+						<option value="23079">3. BUENAVISTA</option>
+						<option value="23090">4. CANALETE</option>
+						<option value="23162">5. CERETÉ</option>
+						<option value="23168">6. CHIMÁ</option>
+						<option value="23182">7. CHINÚ</option>
+						<option value="23189">8. CIÉNAGA DE ORO</option>
+						<option value="23300">9. COTORRA</option>
+						<option value="23350">10. LA APARTADA</option>
+						<option value="23417">11. LORICA</option>
+						<option value="23419">12. LOS CÓRDOBAS</option>
+						<option value="23464">13. MOMIL</option>
+						<option value="23466">14. MONTELÍBANO</option>
+						<option value="23500">15. MOÑITOS</option>
+						<option value="23555">16. PLANETA RICA</option>
+						<option value="23570">17. PUEBLO NUEVO</option>
+						<option value="23574">18. PUERTO ESCONDIDO</option>
+						<option value="23580">19. PUERTO LIBERTADOR</option>
+						<option value="23586">20. PURÍSIMA DE LA CONCEPCIÓN</option>
+						<option value="23660">21. SAHAGÚN</option>
+						<option value="23670">22. SAN ANDRÉS DE SOTAVENTO</option>
+						<option value="23672">23. SAN ANTERO</option>
+						<option value="23675">24. SAN BERNARDO DEL VIENTO</option>
+						<option value="23678">25. SAN CARLOS</option>
+						<option value="23682">26. SAN JOSÉ DE URÉ</option>
+						<option value="23686">27. SAN PELAYO</option>
+						<option value="23807">29. TIERRALTA</option>
+						<option value="23815">30. TUCHÍN</option>
+						<option value="23855">31. VALENCIA</option>
+					</select>
+				</td>
+				<td><label for="var_57"><strong>57.</strong>Quién hace la atención clínica (consulta médica) y formulación de la infección por el VIH al paciente actualmente</label></td>
+				<td>
+					<select name="var_57" class="var_57" class="var_57">
+						<option value="-">-</option>
+						<option value="1">1. Médico general encargado de acuerdo a la guía de VIH.</option>
+						<option value="2">2. Infectólogo</option>
+						<option value="3">3. Internista</option>
+						<option value="4">4. Pediatra</option>
+						<option value="5">5. Médico general de consulta externa. </option>
+						<option value="6">6. Otro</option>
+						<option value="9">7. No aplica. (No tiene VIH)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_58"><strong>58.</strong>Valoración por Infectólogo en los últimos 6 meses:</label></td>
+				<td>
+					<select name="var_58" class="var_58" class="var_58">
+						<option value="-">-</option>
+						<option value="0">1. Ninguna (si no se ha realizado)</option>
+						<option value="1">2. Una vez </option>
+						<option value="2">3. Dos veces</option>
+						<option value="3">4. Tres veces</option>
+						<option value="4">5. Cuatro o más</option>
+						<option value="9">6. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+				<td><label for="var_59"><strong>59.</strong>Ha tenido al menos un resultado de genotipificación.</label></td>
+				<td>
+					<select name="var_59" class="var_59" class="var_59">
+						<option value="-">-</option>
+						<option value="0">1. No</option>
+						<option value="1">2. Si</option>
+						<option value="2">3. Sin dato</option>
+						<option value="9">4. No aplica (no tiene VIH). </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_60"><strong>60.</strong>Momento de la genotipificación</label></td>
+				<td>
+					<select name="var_60" class="var_60" class="var_60">
+						<option value="-">-</option>
+						<option value="0">1. Si no se realizó genotipificación. No realizada en ningún momento</option>
+						<option value="1">2. Si la primera genotipificación se realizó al momento del diagnóstico </option>
+						<option value="2">3. Si la primera genotipificación se le realizó a la persona al inicio de la TAR </option>
+						<option value="3">4. Si la primera genotipificación se le realizó  a la persona cuando presento la primera falla</option>
+						<option value="4">5. Si la primera genotipificación se le realizó a la persona cuando presento la segunda falla</option>
+						<option value="5">6. Si la primera  genotipificación  se le realizó a la persona cuando presento la tercera falla o en fallas posteriores.</option>
+						<option value="9">7. Si la primera  genotipificación  se le realizó a la persona cuando presento la tercera falla o en fallas posteriores.</option>
+					</select>
+				</td>
+				<td><label for="var_61"><strong>61.</strong>Situación clínica actual ( a la fecha de corte)</label></td>
+				<td>
+					<select name="var_61" class="var_61" class="var_61">
+						<option value="-">-</option>
+						<option value="0">1. Si es persona Asintomática</option>
+						<option value="1">2. Sintomático relacionado con el VIH.</option>
+						<option value="2">3. Sintomático no relacionado con el VIH.</option>
+						<option value="9">4. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_62"><strong>62.</strong>Estadio clínico actual(a la fecha de corte)</label></td>
+				<td>
+					<select name="var_62" class="var_62" class="var_62">
+						<option value="-">-</option>
+						<option value="1">1. Estadio 1</option>
+						<option value="2">2. Estadio 2</option>
+						<option value="3">3. Estadio 3 (SIDA)</option>
+						<option value="4">4. Por establecer </option>
+						<option value="9">5. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+			</tr>
+		</table>	
+			<h5 class="titles">Los ítems 63 a 73 se deben diligenciar con 0 (cero) para las personas que no tienen VIH.</h5>
+		<table>
+			<tr>
+				<td><label for="var_63"><strong>63.</strong>Dislipidemia</label></td>
+				<td>
+					<select name="var_63" class="var_63" class="var_63">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica, dentro de los seis meses antes de la fecha de corte.</option>
+					</select>
+				</td>
+				<td><label for="var_64"><strong>64.</strong>Neuropatía periférica</label></td>
+				<td>
+					<select name="var_64" class="var_64" class="var_64">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica</option>
+					</select>
+				</td>
+				<td><label for="var_65"><strong>65.</strong>Lipoatrofia o lipodistrofia</label></td>
+				<td>
+					<select name="var_65" class="var_65" class="var_65">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_66"><strong>66.</strong>Coinfección con Hepatitis B (VHB)</label></td>
+				<td>
+					<select name="var_66" class="var_66" class="var_66">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica </option>
+					</select>
+				</td>
+				<td><label for="var_67"><strong>67.</strong>Coinfección con Hepatitis C (VHC)</label></td>
+				<td>
+					<select name="var_67" class="var_67" class="var_67">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica</option>
+					</select>
+				</td>
+				<td><label for="var_68"><strong>68.</strong>Anemia</label></td>
+				<td>
+					<select name="var_68" class="var_68" class="var_68">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica dentro de los seis meses antes de la fecha de corte.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_69"><strong>69.</strong>Cirrosis hepática</label></td>
+				<td>
+					<select name="var_69" class="var_69" class="var_69">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presentala enfermedad. El diagnostico debe estar documentado en la historia clínica.</option>
+					</select>
+				</td>
+				<td><label for="var_70"><strong>70.</strong>Enfermedad Renal Crónica</label></td>
+				<td>
+					<select name="var_70" class="var_70" class="var_70">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica. </option>
+					</select>
+				</td>
+				<td><label for="var_71"><strong>71.</strong>Enfermedad coronaria</label></td>
+				<td>
+					<select name="var_71" class="var_71" class="var_71">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_72"><strong>72.</strong>Otras infecciones de transmisión sexual</label></td>
+				<td>
+					<select name="var_72" class="var_72" class="var_72">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica dentro de los doce meses antes de la fecha de corte.</option>
+					</select>
+				</td>
+				<td><label for="var_73"><strong>73.</strong>Neoplasia no relacionada con SIDA</label></td>
+				<td>
+					<select name="var_73" class="var_73" class="var_73">
+						<option value="-">-</option>
+						<option value="0">1. no presenta la enfermedad</option>
+						<option value="1">2. presenta la enfermedad. El diagnostico debe estar documentado en la historia clínica.</option>
+					</select>
+				</td>
+				<td><label for="var_74"><strong>74.</strong>Discapacidad funcional</label></td>
+				<td>
+					<select name="var_74" class="var_74" class="var_74">
+						<option value="-">-</option>
+						<option value="0">1. no presenta discapacidad</option>
+						<option value="1">2. presenta discapacidad como secuela de complicación del VIH</option>
+						<option value="2">3. presenta discapacidad  no relacionada con el VIH. El diagnostico debe estar documentado en la historia clínica.</option>
+						<option value="3">4. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_75"><strong>75.</strong>Fecha de último conteo de linfocitos T CD 4+</label></td>
+				<td>
+					<input  name="var_75" type="text" list="var_75" placeholder="ejemplo:0000-00-00"  class="var_75">
+					<datalist id="var_75">
+						<option value="1800-01-01">1. No se ha realizado</option>
+						<option value="1799-01-01">2. No aplica (no tiene VIH).</option>
+					</datalist>
+				</td>
+				<td><label for="var_76"><strong>76.</strong>Valor del último conteo de linfocitos T CD 4+: </label></td>
+				<td>
+					<input  name="var_76" type="text" list="var_76" placeholder="[0-10000]"  class="var_76">
+					<datalist id="var_76">
+						<option value="88888">1. No se ha realizado</option>
+						<option value="99999">2. No aplica (no tiene VIH).</option>
+					</datalist>
+				</td>
+				<td><label for="var_77"><strong>77.</strong>Fecha del último conteo de linfocitos totales</label></td>
+				<td>
+					<input  name="var_77" type="text" list="var_77" placeholder="ejemplo:0000-00-00"  class="var_77">
+					<datalist id="var_77">
+						<option value="1800-01-01">1. No se ha realizado</option>
+						<option value="1799-01-01">2. No aplica (no tiene VIH).</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_78"><strong>78.</strong>Valor del último conteo de linfocitos totales</label></td>
+				<td>
+					<input  name="var_78" type="text" list="var_78" placeholder="[0-50000]"  class="var_78">
+					<datalist id="var_78">
+						<option value="88888">1. No se ha realizado</option>
+						<option value="99999">2. No aplica (no tiene VIH).</option>
+					</datalist>
+				</td>
+				<td><label for="var_79"><strong>79.</strong>Fecha de última carga viral para VIH</label></td>
+				<td>
+					<input  name="var_79" type="text" list="var_79" placeholder="ejemplo:0000-00-00"  class="var_79">
+					<datalist id="var_79">
+						<option value="1800-01-01">1. No se ha realizado</option>
+						<option value="1799-01-01">2. No aplica (no tiene VIH).</option>
+					</datalist>
+				</td>
+				<td><label for="var_80"><strong>80.</strong>Resultado de la última carga viral para VIH</label></td>
+				<td>
+					<select name="var_80" class="var_80" class="var_80">
+						<option value="-">-</option>
+						<option value="0">1. Si es Indetectable.</option>
+						<option value="1">2. Detectable pero menos de mil copias.</option>
+						<option value="2">3. Mil o más copias.</option>
+						<option value="3">4. No tiene carga viral en los últimos 6 meses.</option>
+						<option value="9">5. No aplica.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_81"><strong>81.</strong>Suministro de condones en los últimos tres meses</label></td>
+				<td>
+					<select name="var_81" class="var_81" class="var_81">
+						<option value="-">-</option>
+						<option value="0">1. No recibió condones.</option>
+						<option value="1">2. Sí recibió condones</option>
+						<option value="2">3. Información no disponible en la historia clínica.</option>
+						<option value="9">5. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+				<td><label for="var_81_1"><strong>81.1.</strong>Numero de condones suministrados en los últimos tres meses</label></td>
+				<td>
+					<select name="var_81_1" class="var_81_1" class="var_81_1">
+						<option value="-">-</option>
+						<option value="0">1. No suministro de condones</option>
+						<option value="1">2. Menos de 10</option>
+						<option value="2">3. Entre 10 y 20</option>
+						<option value="3">4. Mas de 20 condones</option>
+						<option value="4">5. Información no disponible en la historia clínica.</option>
+						<option value="9">6. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+				<td><label for="var_82"><strong>82.</strong>Método de planificación familiar</label></td>
+				<td>
+					<select name="var_82" class="var_82" class="var_82">
+						<option value="-">-</option>
+						<option value="0">1. No planifica. Si la persona solo utiliza como único método el condón, marque cero (0).</option>
+						<option value="1">2. Método de esterilización definitiva.</option>
+						<option value="2">3. Dispositivo Intrauterino.</option>
+						<option value="3">4. Métodos hormonales.</option>
+						<option value="4">5. Otros métodos.</option>
+						<option value="9">6. No aplica (no tiene VIH o es un menor de 18 meses hijo de madre infectada por el virus VIH o es menor de 10 años).</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_83"><strong>83.</strong>Vacuna hepatitis B</label></td>
+				<td>
+					<select name="var_83" class="var_83" class="var_83">
+						<option value="-">-</option>
+						<option value="0">1. No tiene la vacuna. </option>
+						<option value="1">2. Tiene esquema incompleto. </option>
+						<option value="2">3. Tiene esquema completo ó nivel de anticuerpos para Hepatitis B adecuado.</option>
+						<option value="3">4. No aplica (no tiene VIH). </option>
+						<option value="9">6. Sin dato.</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<table class="tabla_6">
+			<tr>
+				<td><label for="var_84"><strong>84.</strong>Se le  realizó PPD (Prueba cutánea de derivado proteico purificado) en los últimos 12 meses</label></td>
+				<td>
+					<select name="var_84" class="var_84" class="var_84">
+						<option value="-">-</option>
+						<option value="0">1. No se le ha realizado la prueba.</option>
+						<option value="1">2. PPD negativo.</option>
+						<option value="2">3. PPD positivo (5 mm ó más de diámetro).</option>
+						<option value="9">4. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+				<td><label for="var_85"><strong>85.</strong>Estudio con Carga viral para VIH en menores de 18 meses expuestos al VIH (hijos de madres con infección por el VIH)</label></td>
+				<td>
+					<select name="var_85" class="var_85" class="var_85">
+						<option value="-">-</option>
+						<option value="0">1. No se ha realizado.</option>
+						<option value="1">2. Se le realizó la primera carga viral a las 4 semanas de vida.</option>
+						<option value="2">3. Se le realizó la primera carga viral entre 4 y 24 semanas.</option>
+						<option value="3">4. Se le realizó la primera carga viral entre las 25 y 53 semanas.</option>
+						<option value="4">5. Se le realizó la primera carga viral entre el año cumplido y los 18 meses</option>
+						<option value="9">6. No aplica. (No es menor de 18 meses hijo de madre con infección por VIH</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_86"><strong>86.</strong>Estudio con segunda carga viral para menores de 18 meses expuestos al VIH (hijos de madres con infección por el VIH).</label></td>
+				<td>
+					<select name="var_86" class="var_86" class="var_86">
+						<option value="-">-</option>
+						<option value="0">1. No se ha realizado.</option>
+						<option value="1">2. Se le realizó la segunda carga viral a las 16 semanas.</option>
+						<option value="2">3. Se le realizó la segunda carga viral entre 17 y 24 semanas.</option>
+						<option value="3">4. Se le realizó la segunda carga viral entre las 25 y 53 semanas.</option>
+						<option value="4">5. Se le realizó la primera carga viral entre el año cumplido y los 18 meses</option>
+						<option value="9">6. No aplica. (No es menor de 18 meses hijo de madre con infección por VIH</option>
+					</select>
+				</td>
+				<td><label for="var_87"><strong>87.</strong>Número de cargas virales para VIH que se le han realizado al menor de 18 meses expuesto al VIH (hijo de madre con infección por el VIH).</label></td>
+				<td>
+					<input  name="var_87" type="text" list="var_87" placeholder="[0-12]"  class="var_87">
+					<datalist id="var_87">
+						<option value="99">1. No aplica. (No es menor de 18 meses hijo de madre con infección por VIH)</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_88"><strong>88.</strong>Suministro de fórmula láctea</label></td>
+				<td>
+					<select name="var_88" class="var_88" class="var_88">
+						<option value="-">-</option>
+						<option value="0">1. No recibió o no recibe fórmula láctea exclusiva y completa de 0 - 6 meses de vida.</option>
+						<option value="1">2. Si Recibió o si recibe fórmula láctea exclusiva y completa de 0 - 6 meses de vida.</option>
+						<option value="9">3. No aplica. (No es menor de 18 meses hijo de madre con infección por VIH)</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+			<h3 class="titles">A partir de esta variable se registraran los datos relacionados con la terapia antirretroviral que recibe la persona actualmente (a la fecha de corte)</h3>
+		<table>
+			<tr>
+				<td><label for="var_89"><strong>89.</strong>Recibe TAR</label></td>
+				<td>
+					<select name="var_89" class="var_89" class="var_89">
+						<option value="-">-</option>
+						<option value="0">1. No recibe TAR porque no cumple criterios</option>
+						<option value="1">2. No recibe TAR porque rechaza el tratamiento.</option>
+						<option value="2">3. No recibe TAR por no adherencia.</option>
+						<option value="3">4. No recibe TAR por desabastecimiento.</option>
+						<option value="4">5. Si recibe TAR.</option>
+						<option value="9">6. No aplica (no tiene VIH).</option>
+					</select>
+				</td>
+				<td><label for="var_90"><strong>90.</strong>Fecha de inicio de TAR actual (a la fecha de corte)</label></td>
+				<td><input  name="var_90" type="text" list="var_90" placeholder="ejemplo 0000-00-00"  class="var_90">
+					<datalist id="var_90">
+						<option value="1800-01-01">1. No aplica cuando la persona no recibe TAR.</option>
+						<option value="1788-01-01">2. Fecha desconocida porque inició la TAR  en otra EPS.</option>
+						<option value="1799-01-01">2. No aplica (no tiene VIH).</option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+			<h3 class="titles">91.Esta variable se relaciona con los medicamentos antirretrovirales (principios activos) que recibe actualmente la persona, es decir, a la fecha de corte 31 de enero de 2014.</h3>
+			<!--#############################################################################################-->
+		<table>
+			<tr>
+				<td>
+					<label for="var_91_1"><strong>91.1.</strong>Abacavir</label>
+					<select name="var_91_1" class="var_91_1" class="var_91_1">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_2"><strong>91.2.</strong>Atazanavir</label>
+					<select name="var_91_2" class="var_91_2" class="var_91_2">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_3"><strong>91.3.</strong>Didanosina</label>
+					<select name="var_91_3" class="var_91_3" class="var_91_3">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_4"><strong>91.4.</strong>Efavirenz</label>
+					<select name="var_91_4" class="var_91_4" class="var_91_4">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_5"><strong>91.5.</strong>Estavudina</label>
+					<select name="var_91_5" class="var_91_5" class="var_91_5">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_6"><strong>91.6.</strong>Fosamprenavir</label>
+					<select name="var_91_6" class="var_91_6" class="var_91_6">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_7"><strong>91.7.</strong>Indinavir</label>
+					<select name="var_91_7" class="var_91_7" class="var_91_7">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_8"><strong>91.8.</strong>Lamivudina</label>
+					<select name="var_91_8" class="var_91_8" class="var_91_8">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="var_91_9"><strong>91.9.</strong>Lopinavir</label>
+					<select name="var_91_9" class="var_91_9" class="var_91_9">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_10"><strong>91.10.</strong>Nevirapina:</label>
+					<select name="var_91_10" class="var_91_10" class="var_91_10">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_11"><strong>91.11.</strong>Nelfinavir</label>
+					<select name="var_91_11" class="var_91_11" class="var_91_11">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_12"><strong>91.12.</strong>Ritonavir</label>
+					<select name="var_91_12" class="var_91_12" class="var_91_12">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_13"><strong>91.13.</strong>Saquinavir</label>
+					<select name="var_91_13" class="var_91_13" class="var_91_13">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_14"><strong>91.14.</strong>Zidovudina</label>
+					<select name="var_91_14" class="var_91_14" class="var_91_14">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_15"><strong>91.15.</strong>Tenofovir</label>
+					<select name="var_91_15" class="var_91_15" class="var_91_15">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_16"><strong>91.16.</strong>Emtricitabina</label>
+					<select name="var_91_16" class="var_91_16" class="var_91_16">
+						<option value="-">-</option>
+						<option value="0">1. si no recibió este medicamento</option>
+						<option value="1">2. si recibió este medicamento</option>
+						<option value="9">si no aplica (Persona no tiene VIH o no ha iniciado TAR)</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+			<!--#####################################################################################################-->
+			<h5 class="titles">A partir de la variable  91.17 hasta la  91.20 se debe registrar el ó los  principios activos  antirretrovirales No POS (Darunavir, Enfuvirtida, Etravirina, Maraviroc, Raltegravir) que recibe la persona a la fecha de corte con el código CUM respectivo (Si la persona no tiene VIH  o no ha iniciado TAR registre también la opción 0 –cero-).</h5>
+		<table>
+			<tr>
+				<td>
+					<label for="var_91_17"><strong>91.17.</strong>medicamento 1()</label>
+					<select name="var_91_17" class="var_91_17" class="var_91_17">
+						<option value="-">-</option>
+						<option value="19975691-01-0J05AE10">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_18"><strong>91.18.</strong>medicamento 2()</label>
+					<select name="var_91_18" class="var_91_18" class="var_91_18">
+						<option value="-">-</option>
+						<option value="19946337-01-0V08AA05">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_19"><strong>91.19.</strong>medicamento 3()</label>
+					<select name="var_91_19" class="var_91_19" class="var_91_19">
+						<option value="-">-</option>
+						<option value="19991326-01-0J05AG04">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+				<td>
+					<label for="var_91_20"><strong>91.20.</strong>medicamento 4()</label>
+					<select name="var_91_20" class="var_91_20" class="var_91_20">
+						<option value="-">-</option>
+						<option value="19989116-01-0J05AX09">1. codigo CUM</option>
+						<option value="0">2. Si la persona no recibió medicamento no POS al inicio.</option>
+					</select>
+				</td>
+			</tr>
+		</table>	
+			<h5 class="titles">Los numerales 92 a 92.5 se relacionan con la profilaxis en menores de 18 meses expuestos al VIH (hijos de madre con infección por VIH) y profilaxis de enfermedades oportunistas. Si la persona no tiene VIH, registre 0 (cero) en las variables 92.1 a 92.5.</h5>
+		<table class="tabla_7">
+			<tr>
+				<td><label for="var_92"><strong>92.</strong>ARV para recién nacido menor de 18 meses expuesto al VIH (hijo de madre con infección por VIH)</label></td>
+				<td>
+					<select name="var_92" class="var_92" class="var_92">
+						<option value="-">-</option>
+						<option value="0">1. No recibió profilaxis ARV</option>
+						<option value="1">2. Sí, recibió profilaxis.</option>
+						<option value="2">3. No aplica.</option>
+					</select>
+				</td>
+				<td><label for="var_92_1"><strong>92.1.</strong>Profilaxis para MAC (Mycobacterium Avium Complex)</label></td>
+				<td>
+					<select name="var_92_1" class="var_92_1" class="var_92_1">
+						<option value="-">-</option>
+						<option value="0">1. No recibe este tipo de tratamiento</option>
+						<option value="1">2. Sí lo recibe  con claritromicina</option>
+						<option value="2">3. Sí lo recibe  con azitromicina. </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="var_92_2"><strong>92.2</strong>Profilaxis con Fluconazol</label>
+				</td>
+				<td>
+					<select name="var_92_2" class="var_92_2" class="var_92_2">
+						<option value="-">-</option>
+						<option value="0">1. si no recibe profilaxis con este medicamento. </option>
+						<option value="1">2. si recibe profilaxis con este medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_92_3"><strong>92.3.</strong>Profilaxis con Trimetroprim Sulfa</label></td>
+				<td>
+					<select name="var_92_3" class="var_92_3" class="var_92_3">
+						<option value="-">-</option>
+						<option value="0">1. si no recibe profilaxis con este medicamento. </option>
+						<option value="1">2. si recibe profilaxis con este medicamento.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_92_4"><strong>92.4.</strong>Profilaxis con Inmunoglobulina IV</label></td>
+				<td>
+					<select name="var_92_4" class="var_92_4" class="var_92_4">
+						<option value="-">-</option>
+						<option value="0">1. si no recibe profilaxis con este medicamento. </option>
+						<option value="1">2. si recibe profilaxis con este medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_92_5"><strong>92.5.</strong>Profilaxis con Isoniacida</label></td>
+				<td>
+					<select name="var_92_5" class="var_92_5" class="var_92_5">
+						<option value="-">-</option>
+						<option value="0">1. si no recibe profilaxis con este medicamento. </option>
+						<option value="1">2. si recibe profilaxis con este medicamento.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_93"><strong>93.</strong>Recibe Tratamiento antituberculoso</label></td>
+				<td>
+					<select name="var_93" class="var_93" class="var_93">
+						<option value="-">-</option>
+						<option value="0">1. No recibe tratamiento antituberculoso porque rechaza.</option>
+						<option value="1">2. No recibe el tratamiento antituberculosos por no adherencia.</option>
+						<option value="2">3. No recibe tratamiento antituberculoso por desabastecimiento.</option>
+						<option value="3">4. Si recibe tratamiento antituberculoso.</option>
+						<option value="9">5. No aplica. (No tiene Tuberculosis)</option>
+					</select>
+				</td>
+				<td><label for="var_94"><strong>94.</strong>Fecha de inicio de tratamiento antituberculoso</label></td>
+				<td>
+					<input  name="var_94" type="text" list="var_94" placeholder="ejemplo:0000-00-00"  class="var_94">
+					<datalist id="var_94">
+						<option value="1799-01-01">1. No ha iniciado tratamiento</option>
+						<option value="1800-01-01">2. No aplica porque la persona no tiene tuberculosis.</option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+			<h5 class="titles">Desde  de la variable  95.1 hasta la  95.9  se debe registrar el o los  Medicamentos POS (principios activos). </h5>
+		<table>
+			<tr>
+				<td><label for="var_95_1"><strong>95.1.</strong>Actualmente recibe Amikacina</label></td>
+				<td>
+					<select name="var_95_1" class="var_95_1" class="var_95_1">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_95_2"><strong>95.2.</strong>Actualmente recibe Ciprofloxacina</label></td>
+				<td>
+					<select name="var_95_2" class="var_95_2" class="var_95_2">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_95_3"><strong>95.3.</strong>Actualmente recibe Estreptomicina</label></td>
+				<td>
+					<select name="var_95_3" class="var_95_3" class="var_95_3">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_95_4"><strong>95.4.</strong>Actualmente recibe Ethambutol</label></td>
+				<td>
+					<select name="var_95_4" class="var_95_4" class="var_95_4">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_95_5"><strong>95.5.</strong>Actualmente recibe Ethionamida</label></td>
+				<td>
+					<select name="var_95_5" class="var_95_5" class="var_95_5">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_95_6"><strong>95.6.</strong>Actualmente recibe Isoniacida</label></td>
+				<td>
+					<select name="var_95_6" class="var_95_6" class="var_95_6">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_95_7"><strong>95.7.</strong>Actualmente recibe Pirazinamida</label></td>
+				<td>
+					<select name="var_95_7" class="var_95_7" class="var_95_7">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_95_8"><strong>95.8.</strong>Actualmente recibe Rifampicina</label></td>
+				<td>
+					<select name="var_95_8" class="var_95_8" class="var_95_8">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+				<td><label for="var_95_9"><strong>95.9.</strong>Actualmente recibe Rifabutina</label></td>
+				<td>
+					<select name="var_95_9" class="var_95_9" class="var_95_9">
+						<option value="-">-</option>
+						<option value="0">1. si NO está recibiendo este medicamento actualmente.</option>
+						<option value="1">2. si recibe éste medicamento.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_95_10"><strong>95.10.</strong>Actualmente recibe (medicamento antituberculoso 1)</label></td>
+				<td>
+					<select name="var_95_10" class="var_95_10" class="var_95_10">
+						<option value="-">-</option>
+						<option value="1">1. Código CUM </option>
+						<option value="0">2. La persona no recibe medicamento no POS para tuberculosis.</option>
+					</select>
+				</td>
+				<td><label for="var_95_11"><strong>95.11.</strong>Actualmente recibe (medicamento antituberculoso 2):</label></td>
+				<td>
+					<select name="var_95_11" class="var_95_11" class="var_95_11">
+						<option value="-">-</option>
+						<option value="1">1. Código CUM </option>
+						<option value="0">2. La persona no recibe medicamento no POS para tuberculosis.</option>
+					</select>
+				</td>
+				<td><label for="var_95_12"><strong>95.12.</strong>Actualmente recibe (medicamento antituberculoso 3)</label></td>
+				<td>
+					<select name="var_95_12" class="var_95_12" class="var_95_12">
+						<option value="-">-</option>
+						<option value="1">1. Código CUM </option>
+						<option value="0">2. La persona no recibe medicamento no POS para tuberculosis.</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_95_13"><strong>95.13.</strong>Actualmente recibe (medicamento antituberculoso 4)</label></td>
+				<td>
+					<select name="var_95_13" class="var_95_13" class="var_95_13">
+						<option value="-">-</option>
+						<option value="1">1. Código CUM </option>
+						<option value="0">2. La persona no recibe medicamento no POS para tuberculosis.</option>
+					</select>
+				</td>
+				<td><label for="var_95_14"><strong>95.14.</strong>Actualmente recibe  (medicamento antituberculoso 5)</label></td>
+				<td>
+					<select name="var_95_14" class="var_95_14" class="var_95_14">
+						<option value="-">-</option>
+						<option value="1">1. Código CUM </option>
+						<option value="0">2. La persona no recibe medicamento no POS para tuberculosis.</option>
+					</select>
+				</td>
+				<td><label for="var_96"><strong>96.</strong>Resultado de Serología para Sífilis en primer trimestre de gestación:</label></td>
+				<td>
+					<select name="var_96" class="var_96" class="var_96">
+						<option value="-">-</option>
+						<option value="1">1. Cumple criterios para recibir tratamiento (según Norma Técnica).</option>
+						<option value="2">2. No cumple criterios para recibir tratamiento.</option>
+						<option value="3">3. Gestante a la que no se le realizo serología de primer trimestre o no se conoce el resultado.</option>
+						<option value="9">4. No aplica (porque es hombre o mujer no gestante).</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_97"><strong>97.</strong>Resultado de la Serología para Sífilis en el segundo trimestre de gestación</label></td>
+				<td>
+					<select name="var_97" class="var_97" class="var_97">
+						<option value="-">-</option>
+						<option value="1">1. Cumple criterios para recibir tratamiento (según Norma Técnica).</option>
+						<option value="2">2. No cumple criterios para recibir tratamiento.</option>
+						<option value="3">3. Gestante a la que no se le realizo serología de primer trimestre o no se conoce el resultado.</option>
+						<option value="9">4. No aplica porque es hombre o mujer no gestante; o es gestante que aún no cumple el segundo trimestre</option>
+					</select>
+				</td>
+				<td><label for="var_98"><strong>98.</strong>Resultado de la Serología para Sífilis en el tercer trimestre de gestación</label></td>
+				<td>
+					<select name="var_98" class="var_98" class="var_98">
+						<option value="-">-</option>
+						<option value="1">1. Cumple criterios para recibir tratamiento (según Norma Técnica).</option>
+						<option value="2">2. No cumple criterios para recibir tratamiento.</option>
+						<option value="3">3. Si es gestante a la que no se le realizo serología de tercer trimestre o no se conoce el resultado.</option>
+						<option value="9">4. No aplica porque es hombre o mujer no gestante o es gestante que aun no cumple el tercer trimestre</option>
+					</select>
+				</td>
+				<td><label for="var_99"><strong>99.</strong>Resultado de Serología para Sífilis al momento del parto o aborto</label></td>
+				<td>
+					<select name="var_99" class="var_99" class="var_99">
+						<option value="-">-</option>
+						<option value="1">1. Cumple criterios para recibir tratamiento (según Norma Técnica).</option>
+						<option value="2">2. No cumple criterios para recibir tratamiento.</option>
+						<option value="3">3. Gestante  a la que no se le realizó serología en el momento del parto o aborto o a la que no se le conoce resultado</option>
+						<option value="9">4. No aplica (porque es hombre o mujer no gestante, no ha llegado al parto o no ha tenido aborto).</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_100"><strong>100.</strong>Fecha del primer tratamiento de la sífilis</label></td>
+				<td>
+					<input  name="var_100" type="text" list="var_100" placeholder="ejemplo 0000-00-00"  class="var_100">
+					<datalist id="var_100">
+						<option value="1800-01-01">1. No recibió tratamiento para la sífilis o no se conoce la fecha</option>
+						<option value="1799-01-01">2. No aplica porque no ha requerido tratamiento para la sífilis o porque es hombre o mujer no gestante. </option>
+					</datalist>
+				</td>
+				<td><label for="var_101"><strong>101.</strong>Fecha del segundo tratamiento de la sífilis</label></td>
+				<td>
+					<input  name="var_101" type="text" list="var_101" placeholder="ejemplo 0000-00-00"  class="var_101">
+					<datalist id="var_101">
+						<option value="1800-01-01">1. No recibió segundo tratamiento para la sífilis o no se conoce la fecha.</option>
+						<option value="1799-01-01">2. No aplica porque no ha requerido un segundo tratamiento para la sífilis o porque es hombre o mujer no gestante.</option>
+					</datalist>
+				</td>
+				<td><label for="var_102"><strong>102.</strong>Fecha del tercer tratamiento de la sífilis</label></td>
+				<td>
+					<input  name="var_102" type="text" list="var_102" placeholder="ejemplo 0000-00-00"  class="var_102">
+					<datalist id="var_102">
+						<option value="1800-01-01">1. No recibió segundo tratamiento para la sífilis o no se conoce la fecha.</option>
+						<option value="1799-01-01">2. No aplica porque no ha requerido un tercer  tratamiento para la sífilis o porque es hombre o mujer no gestante.</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_103"><strong>103.</strong>Novedad con respecto al reporte anterior</label></td>
+				<td>
+					<select name="var_103" class="var_103" class="var_103">
+						<option value="-">-</option>
+						<option value="0">1. No presenta ninguna novedad </option>
+						<option value="1">2. Paciente ingreso a la EPS con diagnóstico de infección por el VIH</option>
+						<option value="2">3. Paciente antiguo en la EPS, se le realizo nuevo diagnóstico de infección por el VIH</option>
+						<option value="3">4. Paciente antiguo en EPS y antiguo diagnóstico de infección por VIH que no había sido incluido en reporte </option>
+						<option value="4">5. Paciente que falleció</option>
+						<option value="5">6. Paciente que se desafilió </option>
+						<option value="6">7. Paciente para eliminar de la base de datos por corrección luego de auditoría interna o de la CAC</option>
+						<option value="7">8. Paciente que firmó alta voluntaria del programa o la TAR por decisión propia</option>
+						<option value="8">9. Paciente con cambio de tipo o número de identificación</option>
+						<option value="9">10. Paciente abandonó el tratamiento y es imposible de ubicar</option>
+						<option value="10">11. Paciente con diagnóstico confirmado de VIH no incluido en reporte anterior y esta fallecido en el momento del reporte actual.</option>
+						<option value="11">12. Paciente con diagnóstico confirmado de VIH no incluido en el reporte anterior, pero que esta desafiliado en el momento actual.</option>
+						<option value="12">13. Gestante incluida en el reporte pasado como en proceso de estudio, que obtuvo resultado negativo para VIH en la tamización </option>
+						<option value="13">14. Paciente con tuberculosis incluido en el reporte pasado como paciente en estudio, que obtuvo resultado negativo para VIH en la tamización</option>
+						<option value="14">15. Hijo de madre con VIH que en el reporte anterior se informó como menor de 18 meses en estudio, que se le descartó infección por el VIH</option>
+						<option value="15">16. Suspensión del tratamiento por orden médica.</option>
+						<option value="16">17. Desafiliado al cual se le siguen prestando servicios porque no ha pasado a otra entidad aún (Sentencia T-760, continuidad en tratamiento)</option>
+					</select>
+				</td>
+				<td><label for="var_104"><strong>104.</strong>Fecha de desafiliación del a EPS</label></td>
+				<td>
+					<input  name="var_104" type="text" list="var_104" placeholder="ejemplo 0000-00-00"  class="var_104">
+					<datalist id="var_104">
+						<option value="1799-01-01">1. No aplica porque no ha requerido un tercer  tratamiento para la sífilis o porque es hombre o mujer no gestante.</option>
+					</datalist>
+				</td>
+				<td><label for="var_105"><strong>105.</strong>EPS o entidad territorial a la cual se trasladó la persona con VIH desafiliado</label></td>
+				<td>
+					<select name="var_105" class="var_105">
+						<option value="-">-------------------OPCIONES-------------------</option>
+						<option value="0">1. Si se fue para el extranjero.</option>
+						<option value="8">2. Si esta en proceso de traslado.</option>
+						<option value="9">3. No aplica.</option>
+						<option value="-">-----------------------------EPS-------------------------</option>
+						<option value="CCF001">CAMACOLCOMFAMILIAR CAMACOL</option>
+						<option value="CCF002">COMFAMA</option>
+						<option value="CCF007">COMFAMILIAR CARTAGENA</option>
+						<option value="CCF009"> COMFABOY</option>
+						<option value="CCF015">COMFACOR</option>
+						<option value="CCF018">CAFAM</option>
+						<option value="CCF023">Caja de Compensación Familiar de la Guajira</option>
+						<option value="CCF024">COMFAMILIAR</option>
+						<option value="CCF027">COMFAMILIAR NARIÑO</option>
+						<option value="CCF028">COMFENALCO QUINDIO</option>
+						<option value="CCF031">CAJASAN</option>
+						<option value="CCF032">Fenalco Seccional de Santander</option>
+						<option value="CCF033">Caja de Compensación Familiar de Sucre</option>
+						<option value="CCF035">CAFABA</option>
+						<option value="CCF037">TOLIMA COMFENALCO</option>
+						<option value="CCF045 ">COMFANORTE</option>
+						<option value="CCF049">COMFAORIENTE</option>
+						<option value="CCF053">COMFACUNDI</option>
+						<option value="CCF055">CAJACOPI</option>
+						<option value="CCF101">COLSUBSIDIO</option>
+						<option value="CCF102">COMFACHOCO</option>
+						<option value="CCF103">COMFACA</option>
+						<option value="EPS020">Caprecom EPS</option>
+						<option value="EPS022">EPS CONVIDA</option>
+						<option value="EPS025">CAPRESOCA EPS</option>
+						<option value="EPS028 ">CALISALUD E.P.S</option>
+						<option value="EPS030">E.P.S. CONDOR S.A</option>
+						<option value="EPS031">SELVASALUD S.A. E.P.S</option>
+						<option value="EPSI01">Asociación Indígena del Cesar y la Guajira DUSAKAWI</option>
+						<option value="EPSI02">MANEXKA EPS</option>
+						<option value="EPSI03">Asociación Indígena del Cauca</option>
+						<option value="EPSI04 ">ANASWAYUU</option>
+						<option value="EPSI05">MALLAMAS</option>
+						<option value="EPSI06">PIJAOS SALUD EPSI</option>
+						<option value="EPSS02">Salud Total S.A. E.P.S</option>
+						<option value="EPSS03">Cafesalud E.P.S. S.A.</option>
+						<option value="EPSS09">EPS Programa Comfenalco Antioquia</option>
+						<option value="EPSS14">Humana Vivir S.A. E.P.S.</option>
+						<option value="EPSS26">SOLSALUD E.P.S. S.A</option>
+						<option value="EPSS33">SALUDVIDA S.A .E.P.S</option>
+						<option value="ESS002"> EMDISALUD ESS</option>
+						<option value="ESS024">COOSALUD E.S.S.</option>
+						<option value="ESS062">ASMET SALUD</option>
+						<option value="ESS076">Asociación Mutual Barrios Unidos de Quibdó E.S.S.</option>
+						<option value="ESS091">ECOOPSOS</option>
+						<option value="ESS118">EMSSANAR E.S.S.</option>
+						<option value="ESS133">COMPARTA</option>
+						<option value="ESS207">Asociación Mutual SER Empresa Solidaria de Salud ESS</option>
+						<option value="-">--------------------------MUNICIPIOS--------------------</option>
+						<option value="23001">MONTERÍA</option>
+						<option value="23068">AYAPEL</option>
+						<option value="23079">BUENAVISTA</option>
+						<option value="23090">CANALETE</option>
+						<option value="23162">CERETÉ</option>
+						<option value="23168">CHIMÁ</option>
+						<option value="23182">CHINÚ</option>
+						<option value="23189">CIÉNAGA DE ORO</option>
+						<option value="23300">COTORRA</option>
+						<option value="23350">LA APARTADA</option>
+						<option value="23417">LORICA</option>
+						<option value="23419">LOS CÓRDOBAS</option>
+						<option value="23464">MOMIL</option>
+						<option value="23466">MONTELÍBANO</option>
+						<option value="23500">MOÑITOS</option>
+						<option value="23555">PLANETA RICA</option>
+						<option value="23570">PUEBLO NUEVO</option>
+						<option value="23574">PUERTO ESCONDIDO</option>
+						<option value="23580">PUERTO LIBERTADOR</option>
+						<option value="23586">PURÍSIMA DE LA CONCEPCIÓN</option>
+						<option value="23660">SAHAGÚN</option>
+						<option value="23670">SAN ANDRÉS DE SOTAVENTO</option>
+						<option value="23672">SAN ANTERO</option>
+						<option value="23675">SAN BERNARDO DEL VIENTO</option>
+						<option value="23678">SAN CARLOS</option>
+						<option value="23682">SAN JOSÉ DE URÉ</option>
+						<option value="23686">SAN PELAYO</option>
+						<option value="23807">TIERRALTA</option>
+						<option value="23815">TUCHÍN</option>
+						<option value="23855">VALENCIA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="var_106"><strong>106.</strong>Fecha de muerte</label></td>
+				<td>
+					<input  name="var_106" type="text" list="var_106" placeholder="ejemplo 0000-00-00"  class="var_106">
+					<datalist id="var_106">
+						<option value="1799-01-01">1. No aplica porque la persona no ha fallecido</option>
+					</datalist>
+				</td>
+				<td><label for="var_107"><strong>107.</strong>. Causa de muerte</label></td>
+				<td>
+					<select name="var_107" class="var_107" class="var_107">
+						<option value="-">-</option>
+						<option value="0">1. La persona no ha fallecido.</option>
+						<option value="1">2. Muerte por SIDA.</option>
+						<option value="2">3. Muerte por otra patología no definitoria de SIDA.</option>
+						<option value="3">4. Muerte por causa externa.</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+
+		<input id="Registrador" type="submit" value="Registrar">
+	</form>
+	</div>
+{% endblock %}
