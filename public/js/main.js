@@ -794,7 +794,7 @@ function inicio() {
         }
         console.log(validador)
     });
-      /*$('.Formulario_registro').submit(function(){
+      $('.Formulario_registro').submit(function(){
          if (validador > 0){
                  alert('ERROR: ¡¡HAY CAMPOS INCOMPLETOS¡¡')
                 return false;
@@ -806,7 +806,7 @@ function inicio() {
                      }
              alert('ERROR: ¡¡¡HAY CAMPOS INCOMPLETOS¡¡¡')
             return false;
-       })*/
+       })
 }
 
 function color_validar(param) {
