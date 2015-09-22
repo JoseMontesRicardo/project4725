@@ -1,3 +1,3 @@
 module.exports = function (req, res){
-	res.render('form');
+	res.render('form' , { user_session: req.session.username });
 }

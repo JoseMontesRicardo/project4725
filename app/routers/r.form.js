@@ -1,5 +1,12 @@
 var formController = require('../controllers/form')
 	formRouter = function(router){
-		router.get('/form', formController)
+		var isntLoggIn = function(req, res, next){
+			if(!req.session.username){
+				res.redirect('/')
+				return
+			}
+			next()
+		}
+		router.get('/form', isntLoggIn, formController)
 	}
 module.exports = formRouter;

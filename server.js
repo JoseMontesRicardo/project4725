@@ -1,11 +1,13 @@
-var 	express 	= require('express'),
-	swig 	  	= require('swig'),
-	body_parser   = require('body-parser'),
-	cookie_parser = require('cookie-parser'),
-	server            = express(),
-	excel_export = require('excel-export'),
-	moment        = require('moment'),
-           mysql = require('mysql');
+var 	express 		= require('express'),
+	swig 	  	 	= require('swig'),
+	body_parser  	= require('body-parser'),
+	cookie_parser 	= require('cookie-parser'),
+	server            	= express(),
+	excel_export 		= require('excel-export'),
+	moment        		= require('moment'),
+           mysql 			= require('mysql'),
+           session 		= require('express-session');
+
 
 var conn = mysql.createConnection({
 	host: 'localhost',
@@ -17,6 +19,12 @@ var conn = mysql.createConnection({
 // rendering views
 server.use(body_parser());
 server.use(cookie_parser());
+//configuracion de sesiones
+server.use(session({
+   secret: 'keyboard cat',
+   resave: false,
+   saveUninitialized : false
+}));
 
 server.engine('html', swig.renderFile);
 server.set('view engine', 'html');
@@ -37,7 +45,45 @@ indexRouter(server)
 formRouter(server)
 addController(server, conn)
 
-server.get('/consult', function (req, res){
+var isntLoggIn = function(req, res, next){
+	if(!req.session.username){
+		res.redirect('/')
+		return
+	}
+	next()
+}
+//-------------------------------------------------------
+var isLoggin = function(req, res, next){
+	if(req.session.username){
+		res.redirect('/index')
+		return
+	}
+	next()
+}
+server.get('/', isLoggin, function (req, res){
+	res.render('logg')
+})
+//-------------------------------------------------------
+server.post('/loggin', function (req, res){
+	conn.query('select * from users where (id = '+req.body.user+' && psswd = '+req.body.pass+');', function (error, rows, fields){
+	if ( error ){
+		res.redirect('/')
+	} else if ( rows[0] === undefined ) {
+		res.redirect('/')
+	} else {
+		req.session.username = rows[0].Nombre
+		req.session.password = rows[0].psswd
+		res.redirect('/index')
+	}
+	})
+})
+
+server.get('/loggOut', function (req, res){
+	req.session.destroy()
+	res.redirect('/')
+})
+
+server.get('/consult', isntLoggIn, function (req, res){
 conn.query("select * from user_table", function (error, rows, fields){
 if (error){
 	throw error;
@@ -67,6 +113,10 @@ if (error){
     });
 })
 
+server.use(function(req, res){
+	res.status(404).render('notfound', { msError:req.url })
+})
+
 server.listen(5000);
 
-console.log('server run in localhost:3000')
+console.log('server run in localhost:5000')
