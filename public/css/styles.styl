@@ -1,3 +1,17 @@
+@keyframes vibrar
+	0%
+		transform: rotate(-5deg)
+	20%
+		transform: rotate(5deg)
+	40%
+		transform: rotate(-5deg)
+	60%
+		transform: rotate(5deg)
+	80%
+		transform: rotate(-5deg)
+	100%
+		transform: rotate(0deg)
+
 body{
 	margin 0
 	font-size 16px
@@ -33,9 +47,11 @@ li
 	padding 1em
 	-webkit-transform rotate(-70deg)
 }
-li:hover .a-li-nav
+li:hover
 {
-	color #455A64
+	animation-name: vibrar;
+	animation-duration 0.2s
+	animation-timing-function ease
 }
 a
 {
@@ -57,6 +73,7 @@ a
 }
 .titles{
 	background-color #F48FB1
+	color white
 	text-align center
 	
 }
